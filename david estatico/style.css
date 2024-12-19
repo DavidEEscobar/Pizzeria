@@ -1,0 +1,204 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header{
+    background-color: #ff9800;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hamburger{
+    font-size: 24px;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar{
+    display: none;
+    flex-direction: column;
+    background-color: #ff9800;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 200px;
+    border-left: 2px solid #e68900;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.navbar a:hover{
+    background-color: #e68900;
+}
+
+.navbar.active{
+    display: flex;
+}
+
+
+/* Carrusel */
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    border: 2px solid #ff9800;
+    margin: 0;
+}
+  
+  .carrusel-text {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carrusel-item {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: #ffcc80;
+    color: #333;
+  }
+  
+/* Contenedor de las secciones */
+.sections-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para cada sección */
+.section {
+  background-color: #ffe0b2;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg1{
+    background-image: url(https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-bg2{
+    background-image: url(https://images.pexels.com/photos/280453/pexels-photo-280453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.section-title {
+  margin: 20px;
+  font-size: 34px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.section-content {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #000;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Estilo para la sección de contacto */
+.contact {
+  background-color: #333; /* Fondo más oscuro para mayor contraste */
+  padding: 40px 20px;
+  display: flex; /* Flexbox para alinear los elementos lado a lado */
+  justify-content: space-between; /* Asegura que los items se distribuyan a lo largo */
+  text-align: center; /* Alinea el texto al centro */
+  flex-wrap: wrap; /* Permite que se ajusten en pantallas más pequeñas */
+  gap: 20px; /* Agrega espacio entre los items */
+  min-height: 200px; /* Asegura que la sección tenga una altura mínima */
+}
+
+/* Estilo para los items de contacto */
+.contact-item {
+  flex: 1; /* Cada item ocupa el mismo espacio */
+  margin: 10px;
+  padding: 20px; /* Asegura que los items tengan suficiente espacio */
+  color: #fff; /* Texto blanco para contrastar con el fondo oscuro */
+  font-size: 18px; /* Asegura que el texto sea lo suficientemente grande */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para los items */
+  border-radius: 8px; /* Bordes redondeados */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el texto verticalmente */
+}
+
+/* Ajustes en pantallas pequeñas (mobile) */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column; /* En pantallas pequeñas, los items se apilan */
+    text-align: left; /* Alineación a la izquierda en móviles */
+  }
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .sections-container {
+    flex-direction: column;
+  }
+}
+
+/* Clase base para ocultar los elementos */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Mueve el elemento hacia abajo para ocultarlo */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Clase que se añadirá cuando el elemento se vuelve visible */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
